@@ -1,0 +1,210 @@
+{
+  "version": 3,
+  "updatedAt": "2026-07-06",
+  "title": "מסלול לימוד שיווק דיגיטלי — מאפס ועד פרילנסר",
+  "modules": [
+    {
+      "id": "m01",
+      "slug": "foundations",
+      "title": "יסודות השיווק הדיגיטלי",
+      "description": "מבט-על על עולם השיווק הדיגיטלי: מושגים, ערוצים, משפך שיווקי ומדדים בסיסיים. הבסיס שכל השאר נבנה עליו.",
+      "lessons": [
+        { "id": "m01-l01", "slug": "what-is-digital-marketing", "title": "מה זה שיווק דיגיטלי? מבט-על ומושגי יסוד" },
+        { "id": "m01-l02", "slug": "marketing-channels", "title": "ערוצי השיווק המרכזיים: אורגני, ממומן, בבעלות (Owned / Earned / Paid)" },
+        { "id": "m01-l03", "slug": "funnel-and-customer-journey", "title": "משפך השיווק (Marketing Funnel) ומסע הלקוח (Customer Journey)" },
+        { "id": "m01-l04", "slug": "basic-metrics", "title": "מדדים שחייבים להכיר: CPC, CTR, ROI, ROAS, שיעור המרה (Conversion Rate)" }
+      ],
+      "project": { "title": "מיפוי נוכחות דיגיטלית של עסק אמיתי: זיהוי הערוצים והמשפך שלו" }
+    },
+    {
+      "id": "m02",
+      "slug": "strategy",
+      "title": "אסטרטגיה: שוק, קהל והצעת ערך",
+      "description": "לפני שמפרסמים — מבינים למי מוכרים, מה מוכרים ולמה שיקנו דווקא מאיתנו.",
+      "lessons": [
+        { "id": "m02-l01", "slug": "market-research", "title": "מחקר שוק (Market Research): מתחרים, מגמות וכלים" },
+        { "id": "m02-l02", "slug": "target-audience-personas", "title": "קהל יעד ופרסונות (Target Audience & Personas)" },
+        { "id": "m02-l03", "slug": "value-proposition", "title": "הצעת ערך (Value Proposition) ובידול מהמתחרים" },
+        { "id": "m02-l04", "slug": "consumer-psychology", "title": "פסיכולוגיית צרכנים (Consumer Psychology): למה אנשים קונים" }
+      ],
+      "project": { "title": "מסמך אסטרטגיה קצר לעסק לדוגמה: קהל, פרסונות והצעת ערך" }
+    },
+    {
+      "id": "m03",
+      "slug": "copy-content",
+      "title": "קופירייטינג, סטוריטלינג ויצירת תוכן",
+      "description": "המילים והתוכן שמניעים אנשים לפעולה — הכישור הבסיסי ביותר של כל משווק.",
+      "lessons": [
+        { "id": "m03-l01", "slug": "copywriting-basics", "title": "יסודות הקופירייטינג (Copywriting)" },
+        { "id": "m03-l02", "slug": "copy-formulas-headlines", "title": "נוסחאות קופי (AIDA, PAS) וכתיבת כותרות" },
+        { "id": "m03-l03", "slug": "storytelling", "title": "סטוריטלינג (Storytelling) שיווקי" },
+        { "id": "m03-l04", "slug": "content-creation", "title": "יצירת תוכן ואסטרטגיית תוכן (Content Marketing)" },
+        { "id": "m03-l05", "slug": "canva", "title": "Canva: עיצוב שיווקי גם בלי להיות מעצב" }
+      ],
+      "project": { "title": "ערכת תוכן לעסק: 3 פוסטים + כותרת לדף בית + באנר ב-Canva" }
+    },
+    {
+      "id": "m04",
+      "slug": "organic-social",
+      "title": "שיווק אורגני ברשתות חברתיות",
+      "description": "ניהול נוכחות ברשתות בלי תקציב פרסום: תוכן, קהילה ועקביות — אחד השירותים המבוקשים ביותר מפרילנסרים.",
+      "changesFrequently": true,
+      "lessons": [
+        { "id": "m04-l01", "slug": "organic-social-basics", "title": "יסודות השיווק האורגני ברשתות ובחירת הפלטפורמות הנכונות" },
+        { "id": "m04-l02", "slug": "instagram-facebook-organic", "title": "אינסטגרם ופייסבוק: ניהול אורגני, תוכן וקהילה" },
+        { "id": "m04-l03", "slug": "linkedin", "title": "לינקדאין (LinkedIn): נוכחות מקצועית ושיווק B2B" }
+      ],
+      "project": { "title": "תוכנית תוכן חודשית לעסק + שבוע פוסטים מוכנים לפרסום" }
+    },
+    {
+      "id": "m05",
+      "slug": "websites-landing-pages",
+      "title": "אתרים ודפי נחיתה",
+      "description": "הנכס הדיגיטלי שאליו מגיע כל התנועה: איך בונים אתר ודף נחיתה שממירים.",
+      "lessons": [
+        { "id": "m05-l01", "slug": "how-websites-work", "title": "איך אתר עובד? דומיין, אחסון ומושגים טכניים למשווק" },
+        { "id": "m05-l02", "slug": "wordpress", "title": "WordPress: בניית אתר צעד אחר צעד" },
+        { "id": "m05-l03", "slug": "landing-pages", "title": "דפי נחיתה (Landing Pages) שממירים" },
+        { "id": "m05-l04", "slug": "shopify", "title": "Shopify: יסודות המסחר האלקטרוני (E-commerce)" }
+      ],
+      "project": { "title": "בניית דף נחיתה אמיתי לעסק לדוגמה" }
+    },
+    {
+      "id": "m06",
+      "slug": "seo",
+      "title": "קידום אורגני (SEO)",
+      "description": "איך מביאים תנועה חינמית מגוגל: מחקר מילות מפתח, אופטימיזציה, קישורים וקידום מקומי.",
+      "changesFrequently": true,
+      "lessons": [
+        { "id": "m06-l01", "slug": "how-search-works-keywords", "title": "איך מנועי חיפוש עובדים + מחקר מילות מפתח (Keyword Research)" },
+        { "id": "m06-l02", "slug": "on-page-seo", "title": "SEO בתוך העמוד (On-Page SEO)" },
+        { "id": "m06-l03", "slug": "technical-seo", "title": "SEO טכני (Technical SEO) בסיסי" },
+        { "id": "m06-l04", "slug": "off-page-seo", "title": "SEO מחוץ לאתר (Off-Page SEO): קישורים וסמכות" },
+        { "id": "m06-l05", "slug": "local-seo", "title": "קידום מקומי (Local SEO) ו-Google Business Profile" }
+      ],
+      "project": { "title": "ביקורת SEO (SEO Audit) בסיסית לאתר קיים" }
+    },
+    {
+      "id": "m07",
+      "slug": "google-ads",
+      "title": "פרסום ממומן: Google Ads",
+      "description": "הפלטפורמה הפרסומית הגדולה בעולם: קמפיינים בחיפוש, מדידה ואופטימיזציה.",
+      "changesFrequently": true,
+      "lessons": [
+        { "id": "m07-l01", "slug": "google-ads-basics", "title": "יסודות Google Ads ומבנה חשבון" },
+        { "id": "m07-l02", "slug": "first-search-campaign", "title": "בניית קמפיין חיפוש (Search Campaign) ראשון" },
+        { "id": "m07-l03", "slug": "keywords-ads-extensions", "title": "מילות מפתח, מודעות ונכסי מודעה (Ad Assets)" },
+        { "id": "m07-l04", "slug": "google-ads-optimization", "title": "מדידה ואופטימיזציה של קמפיינים" }
+      ],
+      "project": { "title": "תכנון קמפיין Google Ads מלא על הנייר: מבנה, מילות מפתח ומודעות" }
+    },
+    {
+      "id": "m08",
+      "slug": "meta-ads",
+      "title": "פרסום ממומן: Meta Ads (פייסבוק ואינסטגרם)",
+      "description": "פרסום ברשתות של Meta: קהלים, קריאייטיב, פיקסל ואופטימיזציה.",
+      "changesFrequently": true,
+      "lessons": [
+        { "id": "m08-l01", "slug": "meta-ads-basics", "title": "יסודות Meta Ads ומנהל המודעות (Ads Manager)" },
+        { "id": "m08-l02", "slug": "audiences-targeting", "title": "קהלים וטירגוט (Targeting): קהלים מותאמים ודומים" },
+        { "id": "m08-l03", "slug": "creative-campaign-structure", "title": "קריאייטיב ומבנה קמפיין מנצח" },
+        { "id": "m08-l04", "slug": "pixel-measurement", "title": "פיקסל (Meta Pixel), מדידה ואופטימיזציה" }
+      ],
+      "project": { "title": "תכנון קמפיין Meta מלא: קהל, קריאייטיב ותקציב" }
+    },
+    {
+      "id": "m09",
+      "slug": "tiktok-ads",
+      "title": "פרסום ממומן: TikTok Ads",
+      "description": "הפלטפורמה הצומחת: עקרונות הפרסום בטיקטוק וקריאייטיב שעובד בה.",
+      "changesFrequently": true,
+      "lessons": [
+        { "id": "m09-l01", "slug": "tiktok-ads-basics", "title": "יסודות TikTok Ads: מערכת הפרסום והקהל" },
+        { "id": "m09-l02", "slug": "tiktok-creative-campaigns", "title": "קמפיינים וקריאייטיב בטיקטוק" }
+      ],
+      "project": { "title": "תסריט ותכנון קמפיין טיקטוק לעסק לדוגמה" }
+    },
+    {
+      "id": "m10",
+      "slug": "email-whatsapp-automation",
+      "title": "אימייל, וואטסאפ ואוטומציות שיווק",
+      "description": "ערוצי הקשר הישיר עם הלקוח: רשימות תפוצה, וואטסאפ, החוק בישראל — ואוטומציות שעושות את העבודה בשבילך.",
+      "lessons": [
+        { "id": "m10-l01", "slug": "email-marketing-basics", "title": "יסודות Email Marketing ובניית רשימת תפוצה" },
+        { "id": "m10-l02", "slug": "newsletters-sequences", "title": "כתיבת ניוזלטרים וסדרות מיילים (Email Sequences)" },
+        { "id": "m10-l03", "slug": "whatsapp-marketing", "title": "שיווק בוואטסאפ (WhatsApp): הערוץ המרכזי בשוק הישראלי" },
+        { "id": "m10-l04", "slug": "israeli-law-regulation", "title": "חוק ורגולציה בישראל: חוק הספאם (תיקון 40), פרטיות וכללי פרסום" },
+        { "id": "m10-l05", "slug": "marketing-automation", "title": "אוטומציות שיווק (Marketing Automation): Make, Zapier וחברים" }
+      ],
+      "project": { "title": "בניית סדרת מיילים אוטומטית של 3 הודעות — תקינה לפי חוק הספאם" }
+    },
+    {
+      "id": "m11",
+      "slug": "analytics-cro",
+      "title": "מדידה, אנליטיקס ו-CRO",
+      "description": "מה שלא נמדד לא משתפר: Google Analytics, Tag Manager, ניתוח נתונים ואופטימיזציית המרות.",
+      "changesFrequently": true,
+      "lessons": [
+        { "id": "m11-l01", "slug": "ga4-basics", "title": "Google Analytics 4: יסודות והתקנה" },
+        { "id": "m11-l02", "slug": "ga4-reports-events", "title": "GA4: דוחות, אירועים (Events) והמרות" },
+        { "id": "m11-l03", "slug": "google-tag-manager", "title": "Google Tag Manager (GTM): התקנת פיקסלים ומעקב המרות בפועל" },
+        { "id": "m11-l04", "slug": "cro-basics", "title": "אופטימיזציית שיעור המרה (CRO - Conversion Rate Optimization)" },
+        { "id": "m11-l05", "slug": "ab-testing", "title": "בדיקות A/B (A/B Testing) וקבלת החלטות מנתונים" }
+      ],
+      "project": { "title": "ניתוח נתוני אתר והצעת 3 שיפורי המרה מבוססי נתונים" }
+    },
+    {
+      "id": "m12",
+      "slug": "ai-marketing",
+      "title": "AI לשיווק",
+      "description": "כלי ה-AI שהופכים משווק אחד לצוות שלם: ChatGPT, Claude, Gemini ו-Perplexity.",
+      "changesFrequently": true,
+      "lessons": [
+        { "id": "m12-l01", "slug": "ai-intro-prompting", "title": "מבוא ל-AI בשיווק ועקרונות כתיבת פרומפטים (Prompt Engineering)" },
+        { "id": "m12-l02", "slug": "chatgpt-marketing", "title": "ChatGPT לשיווק: תוכן, רעיונות וניתוח" },
+        { "id": "m12-l03", "slug": "claude-marketing", "title": "Claude לשיווק: כתיבה ארוכה, אסטרטגיה ועבודה עם מסמכים" },
+        { "id": "m12-l04", "slug": "gemini-marketing", "title": "Gemini לשיווק: שילוב עם כלי Google" },
+        { "id": "m12-l05", "slug": "perplexity-research", "title": "Perplexity: מחקר שוק ומתחרים מהיר" }
+      ],
+      "project": { "title": "בניית ערכת פרומפטים אישית לכל שלבי העבודה השיווקית" }
+    },
+    {
+      "id": "m13",
+      "slug": "ai-creative",
+      "title": "AI יוצר: ויזואל, וידאו וסוכנים",
+      "description": "הדור הבא של כלי ה-AI: יצירת תמונות, וידאו וקול, צ'אטבוטים וסוכנים אוטומטיים — הקריאייטיב והשירות של 2026.",
+      "changesFrequently": true,
+      "lessons": [
+        { "id": "m13-l01", "slug": "ai-images", "title": "יצירת תמונות וויזואל ב-AI: ‏Midjourney, FLUX וחברים" },
+        { "id": "m13-l02", "slug": "ai-video-voice", "title": "וידאו וקול ב-AI: ‏Runway, אווטארים (HeyGen) ו-ElevenLabs" },
+        { "id": "m13-l03", "slug": "ai-chatbots-agents", "title": "צ'אטבוטים וסוכני AI לעסקים: וואטסאפ, אוטומציות ו-GEO מעשי" }
+      ],
+      "project": { "title": "חבילת קריאייטיב AI מלאה לעסק: תמונות, סרטון ובוט שירות" }
+    },
+    {
+      "id": "m14",
+      "slug": "complementary-channels",
+      "title": "ערוצים משלימים: יוטיוב, משפיענים ו-CRM",
+      "description": "שלושת הפערים שהופכים משווק טוב למקיף: הפלטפורמה השנייה בעולם, שיווק היוצרים, וניהול הלידים.",
+      "lessons": [
+        { "id": "m14-l01", "slug": "youtube-marketing", "title": "יוטיוב לעסקים: אורגני, שורטס ויסודות המודעות" },
+        { "id": "m14-l02", "slug": "influencer-marketing", "title": "שיווק משפיענים: בחירה, תמחור, חוזה ומדידה" },
+        { "id": "m14-l03", "slug": "crm-lead-management", "title": "CRM וניהול לידים לעסק קטן" }
+      ],
+      "project": { "title": "תוכנית ערוץ משלים אחד לעסק: יוטיוב / משפיענים / CRM — לפי הצורך" }
+    },
+    {
+      "id": "m15",
+      "slug": "freelance-career",
+      "title": "קריירת פרילנס בשיווק דיגיטלי",
+      "description": "מהידע אל הפרנסה: תיק עבודות, מציאת לקוחות, תמחור ועבודה מקצועית מול לקוחות.",
+      "lessons": [
+        { "id": "m15-l01", "slug": "portfolio", "title": "בניית תיק עבודות (Portfolio) גם בלי לקוחות עדיין" },
+        { "id": "m15-l02", "slug": "finding-clients", "title": "מציאת לקוחות: איפה ואיך" },
+        { "id": "m15-l03", "slug": "pricing", "title": "תמחור שירותי שיווק דיגיטלי" },
+        { "id": "m15-l04", "slug": "working-with-clients", "title": "עבודה מול לקוחות: אפיון, ציפיות, דוחות ושימור" }
+      ],
+      "project": { "title": "פרויקט גמר: תוכנית שיווק דיגיטלי מלאה לעסק אמיתי, מאסטרטגיה ועד ביצוע" }
+    }
+  ]
+}
