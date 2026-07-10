@@ -7,9 +7,14 @@ export default function SiteHeader() {
         <Link href="/" className="text-lg font-bold hover:opacity-80">
           לומדים שיווק דיגיטלי
         </Link>
-        <span className="text-sm text-zinc-500 dark:text-zinc-400">
-          מאפס ועד פרילנסר
-        </span>
+        <nav className="flex items-center gap-4 text-sm">
+          <Link href="/" className="font-medium hover:underline">
+            הקורס
+          </Link>
+          <Link href="/project" className="font-medium hover:underline">
+            הפרויקט שלי
+          </Link>
+        </nav>
       </div>
     </header>
   );
