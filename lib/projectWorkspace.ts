@@ -1,11 +1,24 @@
 import { getCurriculum } from "@/lib/curriculum";
+import { getLessonPracticalTask } from "@/lib/lessons";
+
+export interface ProjectLesson {
+  id: string;
+  number: number;
+  title: string;
+  href: string;
+  taskMarkdown: string | null;
+  taskMissing: boolean;
+}
 
 export interface ProjectStage {
   id: string;
   number: number;
+  moduleTitle: string;
+  projectTitle: string;
   title: string;
   explanation: string;
   prompt: string;
+  lessons: ProjectLesson[];
 }
 
 const STAGE_GUIDANCE = [
@@ -32,9 +45,29 @@ export function getProjectStages(): ProjectStage[] {
     return {
       id: module.id,
       number: index + 1,
+      moduleTitle: module.title,
+      projectTitle: module.project?.title ?? module.title,
       title,
       explanation: `${explanation} הפרויקט של מודול זה: ${module.project?.title ?? module.title}.`,
       prompt,
+      lessons: module.lessons.map((lesson, lessonIndex) => {
+        let taskMarkdown: string | null = null;
+
+        try {
+          taskMarkdown = getLessonPracticalTask(module.slug, lesson.slug);
+        } catch {
+          // A malformed or unavailable lesson must not block the project page.
+        }
+
+        return {
+          id: lesson.id,
+          number: lessonIndex + 1,
+          title: lesson.title,
+          href: `/lessons/${module.slug}/${lesson.slug}`,
+          taskMarkdown,
+          taskMissing: taskMarkdown === null,
+        };
+      }),
     };
   });
 }

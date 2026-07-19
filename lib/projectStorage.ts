@@ -11,11 +11,19 @@ export interface ProjectStageEntry {
   updatedAt?: string;
 }
 
+export interface ProjectLessonTaskEntry {
+  text: string;
+  completed: boolean;
+  updatedAt?: string;
+  completedAt?: string;
+}
+
 export interface ProjectWorkspaceData {
   version: 1;
   updatedAt?: string;
   business: ProjectBusiness;
   stages: Record<string, ProjectStageEntry>;
+  lessonTasks?: Record<string, ProjectLessonTaskEntry>;
 }
 
 export function emptyProjectWorkspace(): ProjectWorkspaceData {
@@ -23,6 +31,7 @@ export function emptyProjectWorkspace(): ProjectWorkspaceData {
     version: 1,
     business: { name: "", description: "", audience: "" },
     stages: {},
+    lessonTasks: {},
   };
 }
 
@@ -49,6 +58,21 @@ function validateProjectWorkspace(value: unknown): ProjectWorkspaceData | null {
     }
   }
 
+  const lessonTasks: Record<string, ProjectLessonTaskEntry> = {};
+  if (isRecord(value.lessonTasks)) {
+    for (const [id, task] of Object.entries(value.lessonTasks)) {
+      if (isRecord(task)) {
+        lessonTasks[id] = {
+          text: readText(task.text),
+          completed: typeof task.completed === "boolean" ? task.completed : false,
+          updatedAt: typeof task.updatedAt === "string" ? task.updatedAt : undefined,
+          completedAt:
+            typeof task.completedAt === "string" ? task.completedAt : undefined,
+        };
+      }
+    }
+  }
+
   return {
     version: 1,
     updatedAt: typeof value.updatedAt === "string" ? value.updatedAt : undefined,
@@ -58,6 +82,7 @@ function validateProjectWorkspace(value: unknown): ProjectWorkspaceData | null {
       audience: readText(value.business.audience),
     },
     stages,
+    lessonTasks,
   };
 }
 
