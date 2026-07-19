@@ -4,6 +4,11 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import type { Module } from "@/lib/curriculum";
 import { emptyProgress, type ProgressData } from "@/lib/progressTypes";
+import {
+  loadProgressWithApiImport,
+  PROGRESS_STORAGE_KEY,
+  readProgressFromStorage,
+} from "@/lib/progressStorage";
 
 interface Props {
   modules: Module[];
@@ -21,16 +26,21 @@ export default function HomeClient({ modules }: Props) {
 
   useEffect(() => {
     let cancelled = false;
-    fetch("/api/progress")
-      .then((res) => res.json())
-      .then((data: ProgressData) => {
-        if (!cancelled) setProgress(data);
-      })
-      .catch(() => {
-        if (!cancelled) setProgress(emptyProgress());
-      });
+
+    void loadProgressWithApiImport().then((data) => {
+      if (!cancelled) setProgress(data);
+    });
+
+    function handleStorage(event: StorageEvent) {
+      if (event.key === PROGRESS_STORAGE_KEY) {
+        setProgress(readProgressFromStorage());
+      }
+    }
+
+    window.addEventListener("storage", handleStorage);
     return () => {
       cancelled = true;
+      window.removeEventListener("storage", handleStorage);
     };
   }, []);
 

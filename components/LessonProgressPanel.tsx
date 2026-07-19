@@ -1,7 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import type { LessonProgress, ProgressData } from "@/lib/progressTypes";
+import type { LessonProgress } from "@/lib/progressTypes";
+import {
+  addLearningTime,
+  loadProgressWithApiImport,
+  updateLastVisited,
+  updateLessonProgress,
+} from "@/lib/progressStorage";
 
 const HEARTBEAT_SECONDS = 30;
 
@@ -25,55 +31,38 @@ export default function LessonProgressPanel({
   const [lesson, setLesson] = useState<LessonProgress | null>(null);
   const [saving, setSaving] = useState(false);
 
-  // Load current state + record "last visited" + accumulate learning time.
+  // Load once on the client, then record visits and visible learning time locally.
   useEffect(() => {
     let cancelled = false;
+    let heartbeat: ReturnType<typeof setInterval> | undefined;
 
-    fetch("/api/progress")
-      .then((res) => res.json())
-      .then((data: ProgressData) => {
-        if (!cancelled) setLesson(data.lessons[lessonId] ?? {});
-      })
-      .catch(() => {
-        if (!cancelled) setLesson({});
-      });
+    void loadProgressWithApiImport().then((data) => {
+      if (cancelled) return;
 
-    fetch("/api/progress", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ type: "visit", moduleSlug, lessonSlug }),
-    }).catch(() => {});
-
-    const heartbeat = setInterval(() => {
-      if (document.visibilityState !== "visible") return;
-      fetch("/api/progress", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type: "time", seconds: HEARTBEAT_SECONDS }),
-      }).catch(() => {});
-    }, HEARTBEAT_SECONDS * 1000);
+      setLesson(data.lessons[lessonId] ?? {});
+      updateLastVisited(moduleSlug, lessonSlug);
+      heartbeat = setInterval(() => {
+        if (document.visibilityState === "visible") {
+          addLearningTime(HEARTBEAT_SECONDS);
+        }
+      }, HEARTBEAT_SECONDS * 1000);
+    });
 
     return () => {
       cancelled = true;
-      clearInterval(heartbeat);
+      if (heartbeat) clearInterval(heartbeat);
     };
   }, [lessonId, moduleSlug, lessonSlug]);
 
-  async function toggle(field: "completed" | "quizPassed" | "taskDone") {
+  function toggle(field: "completed" | "quizPassed" | "taskDone") {
     if (!lesson || saving) return;
     const value = !lesson[field];
     setSaving(true);
-    setLesson({ ...lesson, [field]: value }); // optimistic
     try {
-      const res = await fetch("/api/progress", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type: "lesson", lessonId, field, value }),
-      });
-      const data: ProgressData = await res.json();
+      const data = updateLessonProgress(lessonId, field, value);
       setLesson(data.lessons[lessonId] ?? {});
     } catch {
-      setLesson({ ...lesson, [field]: !value }); // revert on failure
+      // Keep the last successfully loaded state when browser storage is unavailable.
     } finally {
       setSaving(false);
     }
